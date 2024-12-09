@@ -9,6 +9,7 @@ public class App {
 
             // Print the title of the page
             System.out.println("Page Title: " + doc.title());
+            System.out.println("Hello");
         } catch (Exception e) {
             e.printStackTrace();
         }
