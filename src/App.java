@@ -24,11 +24,13 @@ public class App {
         // You will need to inspect the HTML and find the right CSS selector
 
         String [] keywordsDog = {"puppy" , "stray", "little", "doggie","pup","chewed","spot"};
+        String [] keywordCat = {"kitten"};
         //FileWriter dogWriter = new FileWriter("DogFood.txt");
         String dogFood = "src/DogFood.txt";
         String review = "src/socialMediaPosts.txt";
+        String catFood = "src/CatFood.txt";
         File file = new File(dogFood);
-        FileWriter dog = new FileWriter(file);
+        FileWriter dog = new FileWriter(file,true);
         File fileReview = new File(review);
         Scanner reviews = new Scanner(fileReview);
         reviews.useLocale(Locale.US);
@@ -42,13 +44,17 @@ public class App {
             String reviewToCheck = reviews.nextLine();
             for (String keyword : keywordsDog) {
                 if (reviewToCheck.contains(keyword)) {
-                    System.out.println(reviewToCheck+ " This review has dogs");
+                    dog.write(reviewToCheck + "\n");
+                    System.out.println("Writing review: " + reviewToCheck);
+                    
                     break;
                 }
             }
+            
     
 
         }
+        dog.close();
 
         
 
