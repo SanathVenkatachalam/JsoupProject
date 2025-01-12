@@ -25,14 +25,14 @@ public class App {
 
         String [] keywordsDog = {"puppy" , "stray", "little", "doggie","pup","chewed","spot"};
         //FileWriter dogWriter = new FileWriter("DogFood.txt");
-        File file = new File("C:\\Users\\5\\Documents\\Github\\JsoupProject\\src\\DogFood.txt");
+        String dogFood = "src/DogFood.txt";
+        String review = "src/socialMediaPosts.txt";
+        File file = new File(dogFood);
         FileWriter dog = new FileWriter(file);
-        File fileReview = new File("C:\\Users\\5\\Documents\\Github\\JsoupProject\\src\\socialMediaPosts.txt");
+        File fileReview = new File(review);
         Scanner reviews = new Scanner(fileReview);
         reviews.useLocale(Locale.US);
-        //String review = reviews.nextLine();
-        //System.out.println(reviewOne);
-        //dog.write("Hello");
+        
 
 
 
